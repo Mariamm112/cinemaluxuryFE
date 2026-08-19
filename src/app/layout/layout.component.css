@@ -1,0 +1,30 @@
+:root{
+  --sidebar-bg: #111215;
+  --accent: #b71c1c; /* cinema red */
+  --muted: #f5f5f7;
+  --card-bg: #ffffff;
+}
+.admin-shell{display:flex;min-height:100dvh;background:var(--page-bg);font-family:Inter,system-ui,Segoe UI,Roboto,Arial}
+.sidebar{width:240px;background:#09090b;color:var(--muted-text);display:flex;flex-direction:column;padding:24px;border-right:1px solid rgba(255,255,255,0.04)}
+.brand-row{display:flex;align-items:center;gap:12px;margin-bottom:12px}
+.logo{font-size:20px}
+.brand-text{font-weight:700;font-size:18px}
+.brand-text .cine{color:#fff}
+.brand-text .manager{color:var(--accent);margin-left:4px}
+.section-label{font-size:12px;color:var(--muted-weak);margin:12px 0 8px}
+.nav{display:flex;flex-direction:column;gap:6px}
+.nav-link{display:flex;align-items:center;gap:10px;padding:10px 12px;border-radius:8px;color:var(--muted-weak);text-decoration:none}
+.nav-link .icon{width:20px;display:inline-block;text-align:center}
+.nav-link .label{font-weight:600}
+.nav-link:hover{background:rgba(229,9,20,0.04);color:var(--muted-text)}
+.nav-link.active{background:linear-gradient(90deg, rgba(229,9,20,0.06), rgba(229,9,20,0.02));color:#fff}
+.spacer{flex:1}
+.profile{display:flex;align-items:center;gap:10px;padding:10px;border-radius:8px;background:transparent}
+.avatar{width:40px;height:40px;border-radius:8px;object-fit:cover}
+.profile-info .name{font-weight:700}
+.profile-info .role{font-size:12px;color:var(--muted-weak)}
+.logout{margin-left:auto;background:transparent;border:0;color:var(--muted-weak);cursor:pointer}
+.main-area{flex:1;display:flex;flex-direction:column}
+.content{padding:28px 36px;max-width:1500px;width:100%}
+
+@media(max-width:1000px){.sidebar{width:72px}.nav-link .label{display:none}.brand-text{display:none}}

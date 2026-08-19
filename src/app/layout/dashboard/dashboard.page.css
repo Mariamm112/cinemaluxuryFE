@@ -1,0 +1,24 @@
+.dashboard-root{display:flex;flex-direction:column;gap:20px}
+.hero-banner{background-image:linear-gradient(90deg, rgba(0,0,0,0.45), rgba(0,0,0,0.6)), url('/assets/hero-dashboard.jpg');background-size:cover;background-position:center;padding:20px;border-radius:16px;color:#fff}
+.hero-inner{display:flex;align-items:center;justify-content:space-between;gap:12px}
+.hero-inner h1{font-size:32px;margin:0}
+.lead{color:var(--muted-weak);margin-top:6px}
+.hero-actions{display:flex;gap:10px}
+.btn{padding:10px 14px;border-radius:10px;text-decoration:none;font-weight:700}
+.btn.primary{background:var(--accent);color:#fff}
+.btn.ghost{background:transparent;border:1px solid rgba(255,255,255,0.06);color:var(--muted-text)}
+
+.stats-row{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+
+.main-grid{display:flex;gap:20px}
+.left{flex:0.68}
+.right{flex:0.32}
+
+.second-row{display:grid;grid-template-columns:2fr 1fr;gap:20px}
+.popular-row{display:flex;gap:12px}
+.activity{background:var(--card-bg);padding:16px;border-radius:12px}
+.activity .feed{list-style:none;padding:0;margin:0}
+.activity .feed li{padding:10px 0;border-bottom:1px solid rgba(255,255,255,0.03);color:var(--muted-text)}
+.activity .feed li .ts{color:var(--muted-weak);margin-left:8px;font-size:12px}
+
+@media(max-width:1000px){.main-grid{flex-direction:column}.second-row{grid-template-columns:1fr}.stats-row{grid-template-columns:repeat(2,1fr)}}

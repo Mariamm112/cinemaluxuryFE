@@ -1,1 +1,25 @@
+:root{
+	--page-bg: #09090b; /* main background */
+	--surface: #181818; /* secondary surfaces */
+	--panel-bg: #202020; /* panels/cards */
+	--card-bg: #171717;
+	--accent: #e50914; /* cinema red accent */
+	--accent-soft: rgba(229,9,20,0.12);
+	--muted-text: #e6e6e6;
+	--muted-weak: #9a9a9a;
+	--border: rgba(255,255,255,0.04);
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;font-family:Inter,Segoe UI,Roboto,Arial,sans-serif;background:var(--page-bg);color:var(--muted-text);-webkit-font-smoothing:antialiased}
+
+/* small utility */
+.card-shadow{box-shadow:0 12px 36px rgba(0,0,0,0.6)}
+
+/* layout helpers */
+.container{max-width:1200px;margin:0 auto;padding:0 1rem}
+
+/* typography */
+h1,h2,h3{color:#fff;margin:0}
+
 /* You can add global styles to this file, and also import other style files */

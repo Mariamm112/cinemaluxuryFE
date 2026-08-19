@@ -1,0 +1,17 @@
+:host{display:block}
+.login-page{position:relative;min-height:calc(100svh - var(--nav-height));display:grid;place-items:center;padding:3rem 1rem;overflow:hidden;isolation:isolate}
+.login-backdrop{position:absolute;inset:0;z-index:-2;background:url('/cinema-hero.png') center bottom/cover no-repeat;filter:saturate(.8)}
+.login-page::after{content:"";position:absolute;inset:0;z-index:-1;background:linear-gradient(90deg,rgba(3,3,5,.97) 0%,rgba(3,3,5,.9) 42%,rgba(3,3,5,.48) 100%),linear-gradient(0deg,rgba(0,0,0,.8),transparent 55%)}
+.back-link{position:absolute;left:clamp(1rem,4vw,4rem);top:2rem;color:#b8b8bd;text-decoration:none;font-size:.85rem;display:flex;gap:.55rem}.back-link:hover{color:#fff}
+.login-card{width:min(100%,470px);padding:clamp(1.6rem,4vw,2.7rem);background:rgba(15,15,18,.8);border:1px solid rgba(255,255,255,.1);border-radius:22px;box-shadow:0 28px 80px rgba(0,0,0,.5);backdrop-filter:blur(20px)}
+.brand-lockup{display:flex;align-items:center;gap:.55rem;font-weight:900;letter-spacing:.08em;color:#fff;font-size:.95rem}.brand-lockup strong{color:var(--accent)}
+.brand-mark{display:grid;place-items:center;width:32px;height:32px;border-radius:50%;background:var(--accent);font-weight:900}
+.heading{margin:2.1rem 0 1.8rem}.eyebrow{display:flex;align-items:center;gap:.6rem;margin:0 0 .8rem;color:#bdbdc2;text-transform:uppercase;letter-spacing:.18em;font-size:.67rem;font-weight:700}.eyebrow span{width:26px;height:2px;background:var(--accent)}
+h1{font-size:clamp(2.25rem,5vw,3.25rem);line-height:1;letter-spacing:-.045em} .heading>p:last-child{color:#a8a8ae;line-height:1.55;margin:.9rem 0 0;font-size:.92rem}
+form>label,.password-row label{display:block;color:#e9e9eb;font-size:.8rem;font-weight:650;margin:0 0 .48rem}.field{display:flex;align-items:center;gap:.65rem;background:rgba(255,255,255,.045);border:1px solid rgba(255,255,255,.1);border-radius:11px;padding:0 .85rem;margin-bottom:1.1rem;transition:border-color .2s,box-shadow .2s}.field:focus-within{border-color:rgba(229,9,20,.75);box-shadow:0 0 0 3px rgba(229,9,20,.1)}.field>span{color:#74747b;font-size:.75rem}.field input{width:100%;height:48px;color:#fff;background:none;border:0;outline:0;font:inherit;font-size:.9rem}.field input::placeholder{color:#66666d}
+.password-row{display:flex;align-items:center;justify-content:space-between}.password-row a{color:#c8c8cc;text-decoration:none;font-size:.75rem}.password-row a:hover,.signup a{color:#fff}
+.reveal{color:#aaa;background:none;border:0;cursor:pointer;padding:.5rem 0;font-size:.72rem}.reveal:hover{color:#fff}
+.remember{display:flex!important;align-items:center;gap:.55rem!important;color:#a9a9ae!important;font-weight:400!important;cursor:pointer}.remember input{accent-color:var(--accent)}
+.submit-btn{width:100%;display:flex;align-items:center;justify-content:center;gap:.65rem;margin-top:1.3rem;padding:.9rem 1rem;border:0;border-radius:999px;color:#fff;background:var(--accent);font-weight:750;font-size:.95rem;cursor:pointer;transition:transform .2s,box-shadow .2s}.submit-btn:hover:not(:disabled){transform:translateY(-2px);box-shadow:0 12px 28px rgba(229,9,20,.32)}.submit-btn:disabled{opacity:.45;cursor:not-allowed}
+.signup{text-align:center;color:#939399;font-size:.82rem;margin:1.5rem 0 0}.signup a{color:#ddd;text-underline-offset:3px}
+@media(max-width:600px){.login-page{align-items:start;padding-top:5.25rem}.login-card{border-radius:18px}.back-link{top:1.25rem}.back-link span{display:none}}

@@ -1,0 +1,45 @@
+<div class="dashboard-root">
+  <div class="hero-banner">
+    <div class="hero-inner">
+      <div>
+        <h1>Welcome back, <span class="accent">Admin</span></h1>
+        <div class="lead">Manage your movies, screenings and cinema content from one place.</div>
+      </div>
+      <div class="hero-actions">
+        <a routerLink="/admin/films/new" class="btn primary">+ Add New Film</a>
+        <a routerLink="/admin/films" class="btn ghost">View Films</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="stats-row">
+    <app-stat-card *ngFor="let s of stats" [icon]="s.icon" [label]="s.label" [value]="s.value" [meta]="s.meta"></app-stat-card>
+  </div>
+
+  <div class="main-grid">
+    <div class="left">
+      <app-recent-movies [movies]="recent"></app-recent-movies>
+    </div>
+    <aside class="right">
+      <app-upcoming-screenings [screenings]="screenings"></app-upcoming-screenings>
+    </aside>
+  </div>
+
+  <div class="second-row">
+    <div class="popular">
+      <h3>Popular Movies</h3>
+      <div class="popular-row">
+        <app-movie-card *ngFor="let m of recent" [film]="m"></app-movie-card>
+      </div>
+    </div>
+
+    <div class="activity">
+      <h3>Recent Activity</h3>
+      <ul class="feed">
+        <li><strong>New film added</strong> — Oppenheimer <span class="ts">2h ago</span></li>
+        <li><strong>Screening created</strong> — Dune: Part Two • 20:30 <span class="ts">Today</span></li>
+        <li><strong>Film updated</strong> — Interstellar <span class="ts">3d ago</span></li>
+      </ul>
+    </div>
+  </div>
+</div>

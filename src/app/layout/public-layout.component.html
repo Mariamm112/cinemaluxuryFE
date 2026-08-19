@@ -1,0 +1,29 @@
+<header class="public-navbar">
+  <div class="container nav-inner">
+    <div class="left">
+      <a routerLink="/" class="brand">CENIMALUXURY</a>
+      <nav class="main-nav">
+        <a routerLink="/" class="nav-link">Home</a>
+        <a routerLink="/movies" class="nav-link">Movies</a>
+        <a routerLink="/screenings" class="nav-link">Screenings</a>
+        <a routerLink="/reviews" class="nav-link">Reviews</a>
+      </nav>
+    </div>
+
+    <div class="right">
+      <div class="search">
+        <input placeholder="Search movies..." />
+        <button class="search-btn">🔍</button>
+      </div>
+      <a routerLink="/login" class="login-btn">Login</a>
+    </div>
+  </div>
+</header>
+
+<main>
+  <router-outlet></router-outlet>
+</main>
+
+<footer class="site-footer">
+  <div class="container">© CinemaLuxury</div>
+</footer>

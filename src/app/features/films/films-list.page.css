@@ -1,0 +1,8 @@
+.page-header{display:flex;justify-content:space-between;align-items:center;margin-bottom:1rem}
+.btn{background:var(--accent);color:#fff;padding:0.5rem 0.8rem;border-radius:8px;text-decoration:none;box-shadow:0 8px 20px rgba(229,9,20,0.12)}
+.subtitle{color:var(--muted-weak);font-size:0.95rem}
+.cards-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(180px,1fr));gap:1.25rem}
+
+.pagination{margin-top:1rem;display:flex;justify-content:center}
+
+@media(max-width:600px){.cards-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:.8rem}}

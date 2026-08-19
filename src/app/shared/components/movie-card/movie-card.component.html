@@ -1,0 +1,25 @@
+<article class="movie-card">
+  <a [routerLink]="['/movies', film.id]" class="poster-link" [attr.aria-label]="'View ' + film.title">
+    <div class="poster-wrap">
+      @if (film.posterUrl && !posterFailed) {
+        <img [src]="film.posterUrl" [alt]="film.title + ' poster'" (error)="onPosterError()" />
+      } @else {
+        <div class="poster-fallback" role="img" [attr.aria-label]="film.title + ' poster placeholder'">
+          <span class="poster-brand">CinemaLuxury</span>
+          <span class="poster-icon" aria-hidden="true">▶</span>
+          <strong>{{ film.title }}</strong>
+          <small>{{ film.genre || 'Feature film' }}</small>
+        </div>
+      }
+      <span class="card-overlay"><span>View details</span></span>
+    </div>
+  </a>
+
+  <div class="meta">
+    <div class="title">{{ film.title }}</div>
+    <div class="sub">{{ film.genre || 'Movie' }} <span>•</span> {{ film.releaseDate ? (film.releaseDate | date:'yyyy') : 'Coming soon' }}</div>
+    @if (film.rating) {
+      <div class="rating"><span aria-hidden="true">★</span> {{ film.rating }}</div>
+    }
+  </div>
+</article>

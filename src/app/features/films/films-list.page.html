@@ -1,0 +1,16 @@
+<div class="page container">
+  <div class="page-header">
+    <div>
+      <h2>Movies</h2>
+      <div class="subtitle">Discover our movie collection.</div>
+    </div>
+  </div>
+
+  <div class="cards-grid">
+    <ng-container *ngFor="let f of (films$ | async)">
+      <app-movie-card [film]="f"></app-movie-card>
+    </ng-container>
+  </div>
+
+  <div class="pagination"><!-- future pagination --> </div>
+</div>

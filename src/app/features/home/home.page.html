@@ -1,0 +1,25 @@
+<section class="hero">
+  <img class="hero-bg" src="/cinema-hero.png" alt="Rows of red velvet seats in a dark cinema" />
+  <div class="hero-content container">
+    <p class="eyebrow"><span></span> The premium cinema experience</p>
+    <h1>Stories feel bigger<br />at <span class="accent">CinemaLuxury.</span></h1>
+    <p class="lead">Discover unforgettable films, premium screenings, and the best seats in the house.</p>
+    <div class="hero-actions">
+      <a routerLink="/movies" class="cta">Explore movies <span aria-hidden="true">→</span></a>
+      <a routerLink="/screenings" class="cta ghost">View screenings</a>
+    </div>
+  </div>
+  <a class="scroll-cue" href="#now-showing" aria-label="Scroll to now showing"><span></span>Scroll to discover</a>
+</section>
+
+<section class="section container" id="now-showing">
+  <div class="section-heading">
+    <div><p class="eyebrow"><span></span> Curated for you</p><h2>Now showing</h2></div>
+    <a routerLink="/movies" class="view-all">View all movies <span aria-hidden="true">→</span></a>
+  </div>
+  <div class="cards-row">
+    <ng-container *ngFor="let f of (nowShowing$ | async)">
+      <app-movie-card [film]="f"></app-movie-card>
+    </ng-container>
+  </div>
+</section>

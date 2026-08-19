@@ -1,0 +1,26 @@
+<ng-container *ngIf="film$ | async as film; else loading">
+  <div class="backdrop" [style.background-image]="'linear-gradient(180deg, rgba(0,0,0,0.45), rgba(0,0,0,0.65)), url(' + (film.backdropUrl || film.posterUrl || '/cinema-hero.png') + ')'">
+    <div class="container details-inner">
+      <div class="left">
+        <div class="poster-wrap">
+          <img *ngIf="film.posterUrl" [src]="film.posterUrl" [alt]="film.title + ' poster'" />
+          <div *ngIf="!film.posterUrl" class="poster-empty-large" aria-label="Poster unavailable">🎬</div>
+        </div>
+      </div>
+      <div class="right">
+        <h1>{{ film.title }}</h1>
+        <div class="meta">{{ film.genre }} • {{ film.releaseDate | date:'yyyy' }} • {{ film.duration }} min</div>
+        <p class="overview">{{ film.description }}</p>
+
+        <div class="info-grid">
+          <div><strong>Director</strong><div>{{ film.director }}</div></div>
+        </div>
+
+        <div class="actions">
+          <a routerLink="/screenings" class="btn ghost">View Screenings</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</ng-container>
+<ng-template #loading>Loading...</ng-template>

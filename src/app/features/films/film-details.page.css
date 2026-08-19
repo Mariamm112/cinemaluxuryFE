@@ -1,0 +1,18 @@
+.backdrop{background-size:cover;background-position:center;padding:3rem 0;border-radius:6px;margin-bottom:1.25rem}
+.details-inner{display:flex;gap:1.5rem;align-items:flex-start}
+.left{width:220px}
+.poster-wrap{width:220px;height:330px;border-radius:8px;overflow:hidden;box-shadow:0 14px 36px rgba(0,0,0,0.6)}
+.poster-wrap img{width:100%;height:100%;object-fit:cover}
+.poster-empty-large{display:flex;align-items:center;justify-content:center;font-size:2rem;color:var(--muted-weak);background:linear-gradient(180deg,#111,#222)}
+.right{flex:1;color:var(--muted-text)}
+.right h1{color:#fff;margin:0 0 0.5rem 0}
+.meta{color:var(--muted-weak);margin-bottom:1rem}
+.overview{background:transparent;margin:0 0 1rem 0}
+.info-grid{display:flex;gap:1.5rem;margin-bottom:1rem}
+.info-grid div strong{display:block;color:var(--muted-weak)}
+.actions{display:flex;gap:0.6rem}
+.btn{background:var(--accent);color:#fff;padding:0.6rem 0.9rem;border-radius:8px;text-decoration:none}
+.btn.ghost{background:transparent;border:1px solid var(--border);color:var(--muted-text)}
+.btn.muted{background:rgba(255,255,255,0.04);color:var(--muted-text)}
+
+@media(max-width:900px){.details-inner{flex-direction:column}.left{width:160px}.poster-wrap{width:160px;height:240px}}

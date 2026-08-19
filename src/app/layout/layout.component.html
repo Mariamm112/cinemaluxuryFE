@@ -1,0 +1,35 @@
+<div class="admin-shell">
+  <aside class="sidebar">
+    <div class="brand-row">
+      <div class="logo">🎞️</div>
+      <div class="brand-text"><span class="cine">Cine</span><span class="manager">Manager</span></div>
+    </div>
+
+    <div class="section-label">MANAGEMENT</div>
+
+    <nav class="nav">
+      <a routerLink="/admin/dashboard" routerLinkActive="active" class="nav-link"><span class="icon">🏠</span><span class="label">Dashboard</span></a>
+      <a routerLink="/admin/films" routerLinkActive="active" class="nav-link"><span class="icon">🎬</span><span class="label">Films</span></a>
+      <a routerLink="/admin/screenings" routerLinkActive="active" class="nav-link"><span class="icon">📅</span><span class="label">Screenings</span></a>
+      <a routerLink="/admin/genres" routerLinkActive="active" class="nav-link"><span class="icon">🏷️</span><span class="label">Genres</span></a>
+      <a routerLink="/admin/users" routerLinkActive="active" class="nav-link"><span class="icon">👤</span><span class="label">Users</span></a>
+    </nav>
+
+    <div class="spacer"></div>
+
+    <div class="profile">
+      <img src="/assets/avatar.png" alt="avatar" class="avatar"/>
+      <div class="profile-info">
+        <div class="name">Admin</div>
+        <div class="role">Administrator</div>
+      </div>
+      <button class="logout">⎋</button>
+    </div>
+  </aside>
+
+  <div class="main-area">
+    <section class="content container">
+      <router-outlet></router-outlet>
+    </section>
+  </div>
+</div>

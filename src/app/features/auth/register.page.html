@@ -1,0 +1,56 @@
+<section class="login-page register-page">
+  <div class="login-backdrop" aria-hidden="true"></div>
+  <a routerLink="/" class="back-link" aria-label="Return to home">← <span>Back to home</span></a>
+
+  <div class="login-card">
+    <div class="brand-lockup">
+      <span class="brand-mark">C</span>
+      <span>CINEMA<strong>LUXURY</strong></span>
+    </div>
+
+    <div class="heading">
+      <p class="eyebrow"><span></span> Join the experience</p>
+      <h1>Create your<br />account.</h1>
+      <p>Save favorite films, manage bookings, and never miss a premiere.</p>
+    </div>
+
+    <form (ngSubmit)="submit()" #registerForm="ngForm">
+      <label for="fullName">Full name</label>
+      <div class="field">
+        <span aria-hidden="true">Aa</span>
+        <input id="fullName" name="fullName" type="text" [(ngModel)]="fullName" placeholder="Your full name" autocomplete="name" required minlength="2" />
+      </div>
+
+      <label for="registerEmail">Email address</label>
+      <div class="field">
+        <span aria-hidden="true">&#64;</span>
+        <input id="registerEmail" name="email" type="email" [(ngModel)]="email" placeholder="you@example.com" autocomplete="email" required />
+      </div>
+
+      <label for="registerPassword">Password</label>
+      <div class="field">
+        <span aria-hidden="true">●</span>
+        <input id="registerPassword" name="password" [type]="showPassword ? 'text' : 'password'" [(ngModel)]="password" placeholder="At least 6 characters" autocomplete="new-password" required minlength="6" />
+        <button type="button" class="reveal" (click)="showPassword = !showPassword">{{ showPassword ? 'Hide' : 'Show' }}</button>
+      </div>
+
+      <label for="confirmPassword">Confirm password</label>
+      <div class="field" [class.invalid]="confirmPassword && !passwordsMatch">
+        <span aria-hidden="true">✓</span>
+        <input id="confirmPassword" name="confirmPassword" [type]="showPassword ? 'text' : 'password'" [(ngModel)]="confirmPassword" placeholder="Repeat your password" autocomplete="new-password" required />
+      </div>
+      @if (confirmPassword && !passwordsMatch) {
+        <p class="error-message">Passwords do not match.</p>
+      }
+
+      <label class="remember terms">
+        <input type="checkbox" name="acceptTerms" [(ngModel)]="acceptTerms" required />
+        <span>I agree to the Terms of Service and Privacy Policy.</span>
+      </label>
+
+      <button class="submit-btn" type="submit" [disabled]="registerForm.invalid || !passwordsMatch">Create account <span aria-hidden="true">→</span></button>
+    </form>
+
+    <p class="signup">Already have an account? <a routerLink="/login">Sign in</a></p>
+  </div>
+</section>

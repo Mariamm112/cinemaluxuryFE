@@ -1,0 +1,45 @@
+<section class="login-page">
+  <div class="login-backdrop" aria-hidden="true"></div>
+
+  <a routerLink="/" class="back-link" aria-label="Return to home">← <span>Back to home</span></a>
+
+  <div class="login-card">
+    <div class="brand-lockup">
+      <span class="brand-mark">C</span>
+      <span>CINEMA<strong>LUXURY</strong></span>
+    </div>
+
+    <div class="heading">
+      <p class="eyebrow"><span></span> Welcome back</p>
+      <h1>Your next story<br />is waiting.</h1>
+      <p>Sign in to manage your watchlist, bookings, and favorite films.</p>
+    </div>
+
+    <form (ngSubmit)="submit()" #loginForm="ngForm">
+      <label for="email">Email address</label>
+      <div class="field">
+        <span aria-hidden="true">@</span>
+        <input id="email" name="email" type="email" [(ngModel)]="email" placeholder="you@example.com" autocomplete="email" required />
+      </div>
+
+      <div class="password-row">
+        <label for="password">Password</label>
+        <a href="#">Forgot password?</a>
+      </div>
+      <div class="field">
+        <span aria-hidden="true">●</span>
+        <input id="password" name="password" [type]="showPassword ? 'text' : 'password'" [(ngModel)]="password" placeholder="Enter your password" autocomplete="current-password" required minlength="6" />
+        <button type="button" class="reveal" (click)="showPassword = !showPassword" [attr.aria-label]="showPassword ? 'Hide password' : 'Show password'">{{ showPassword ? 'Hide' : 'Show' }}</button>
+      </div>
+
+      <label class="remember">
+        <input type="checkbox" name="rememberMe" [(ngModel)]="rememberMe" />
+        <span>Keep me signed in</span>
+      </label>
+
+      <button class="submit-btn" type="submit" [disabled]="loginForm.invalid">Sign in <span aria-hidden="true">→</span></button>
+    </form>
+
+    <p class="signup">New to CinemaLuxury? <a routerLink="/register">Create an account</a></p>
+  </div>
+</section>

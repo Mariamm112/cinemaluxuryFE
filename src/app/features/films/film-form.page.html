@@ -1,0 +1,30 @@
+<div class="form-page">
+  <h2>{{ editingId ? 'Edit Film' : 'Add Film' }}</h2>
+  <form [formGroup]="form" (ngSubmit)="save()">
+    <div class="row">
+      <label>Title *</label>
+      <input formControlName="title" />
+      <div class="error" *ngIf="form.controls['title'].invalid && form.controls['title'].touched">Title is required</div>
+    </div>
+
+    <div class="row">
+      <label>Description</label>
+      <textarea formControlName="description"></textarea>
+    </div>
+
+    <div class="row">
+      <label>Release Date</label>
+      <input type="date" formControlName="releaseDate" />
+    </div>
+
+    <div class="row">
+      <label>Duration (min)</label>
+      <input type="number" formControlName="duration" />
+    </div>
+
+    <div class="row actions">
+      <button type="submit" class="btn">Save</button>
+      <button type="button" class="btn muted" (click)="cancel()">Cancel</button>
+    </div>
+  </form>
+</div>
